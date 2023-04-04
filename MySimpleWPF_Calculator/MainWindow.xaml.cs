@@ -218,5 +218,12 @@ namespace MySimpleWPF_Calculator
                 check = false;
             }
         }
+
+        private void ClearBtn_Click(object sender, RoutedEventArgs e)
+        {
+            outputInfo.Text = "";
+            tmpInfo.Text = "";
+            output = "";
+        }
     }
 }
