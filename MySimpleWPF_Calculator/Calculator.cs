@@ -5,16 +5,12 @@ using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MySimpleCalculator
+namespace MySimpleWPF_Calculator
 {
         public class Calculator : IDefaultOperation, IMathOperation
         {
             public double Divide(double operandOne, double operandTwo)
             {
-                if (operandTwo == 0)
-                {
-                    return 0;
-                }
                 return operandOne / operandTwo;
             }
 
@@ -44,9 +40,9 @@ namespace MySimpleCalculator
 
             public double Factorial(int operandOne)
             {
-                if (operandOne == 1) return 1;
-
-                return operandOne * Factorial(operandOne - 1);
+                IEnumerable<int> ints = Enumerable.Range(1, operandOne);
+                int factorial = ints.Aggregate((f, s) => f * s);
+                return factorial;
 
             }
 
