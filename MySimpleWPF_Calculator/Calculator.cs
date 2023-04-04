@@ -11,6 +11,10 @@ namespace MySimpleWPF_Calculator
         {
             public double Divide(double operandOne, double operandTwo)
             {
+                if (operandTwo == 0)
+                {
+                    return 0;
+                }
                 return operandOne / operandTwo;
             }
 
