@@ -350,5 +350,13 @@ namespace MySimpleWPF_Calculator
             }
 
         }
+
+        private void ReversBtn_Click(object sender, RoutedEventArgs e)
+        {
+            tmp = double.Parse(outputInfo.Text);
+            double reversNum = (tmp * (-1));
+            output = reversNum.ToString();
+            outputInfo.Text = reversNum.ToString();
+        }
     }
 }

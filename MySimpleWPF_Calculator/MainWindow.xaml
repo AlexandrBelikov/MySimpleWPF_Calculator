@@ -60,7 +60,8 @@
         <Button x:Name="powerNBtn" Content="xⁿ" Grid.Row="5" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="powerNBtn_Click" />
         <Button x:Name="powerTwoBtn" Content="x²" Grid.Row="6" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="powerTwoBtn_Click" />
         <Button x:Name="sqrtBtn" Content="√x" Grid.Row="7" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="sqrtBtn_Click" />
-        <Button x:Name="ReversBtn" Content="±" Grid.Row="8" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" />
+        <Button x:Name="ReversBtn" Content="±" Grid.Row="8" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="ReversBtn_Click" />
+
 
         <Button x:Name="MC" Content="MC" Grid.Row="2" Grid.Column="0" Background="#94c3f2" Margin="5,20,5,5" FontSize="18" />
         <Button x:Name="MR" Content="MR" Grid.Row="2" Grid.Column="1" Background="#94c3f2" Margin="5,20,5,5" FontSize="18" />
