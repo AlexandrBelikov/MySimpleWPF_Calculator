@@ -11,6 +11,10 @@ namespace MySimpleWPF_Calculator
         {
             public double Divide(double operandOne, double operandTwo)
             {
+                if (operandTwo == 0)
+                {
+                    return 0;
+                }
                 return operandOne / operandTwo;
             }
 
@@ -40,9 +44,9 @@ namespace MySimpleWPF_Calculator
 
             public double Factorial(int operandOne)
             {
-                IEnumerable<int> ints = Enumerable.Range(1, operandOne);
-                int factorial = ints.Aggregate((f, s) => f * s);
-                return factorial;
+
+                if (operandOne == 1) return 1;
+                return operandOne * Factorial(operandOne - 1);
 
             }
 
