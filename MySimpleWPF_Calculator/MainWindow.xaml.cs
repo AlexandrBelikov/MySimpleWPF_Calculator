@@ -234,5 +234,121 @@ namespace MySimpleWPF_Calculator
             }
 
         }
+
+        private void factBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "" || output.GetType() == typeof(int))
+            {
+                Calculator operation = new Calculator();
+                res = operation.Factorial(int.Parse(outputInfo.Text));
+            }
+
+            tmpInfo.Text = output + "! = " + res.ToString();
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void sinBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.Sin(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "sin(" + output + ") = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void cosBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.Cos(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "cos(" + output + ") = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void tanBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.Tan(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "tan(" + output + ") = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void lnBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.Ln(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "Ln(" + output + ") = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void logBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.Lg(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "Log(" + output + ") = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void sqrtBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.SqrtN(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = "√" + output + " = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void powerTwoBtn_Click(object sender, RoutedEventArgs e)
+        {
+            double res = 0;
+            if (output != "")
+            {
+                Calculator operation = new Calculator();
+                res = Math.Round(operation.PowerTwo(double.Parse(outputInfo.Text)), 5, MidpointRounding.ToEven);
+            }
+            tmpInfo.Text = output + "² = " + res;
+            output = res.ToString();
+            outputInfo.Text = res.ToString();
+        }
+
+        private void powerNBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (output != "")
+            {
+                tmp = double.Parse(output);
+                output = "";
+                tmpInfo.Text = (tmp.ToString() + "^");
+            }
+
+        }
     }
 }

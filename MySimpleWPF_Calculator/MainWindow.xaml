@@ -39,7 +39,7 @@
         <Button x:Name="numEight" Content="8" Grid.Row="5" Grid.Column="2" Background="#ffff" Margin="5" FontSize="21" Click="InputOperand" />
         <Button x:Name="numNine" Content="9" Grid.Row="5" Grid.Column="3" Background="#ffff" Margin="5" FontSize="21" Click="InputOperand" />
 
-          <Button x:Name="equalBtn" Content="=" Grid.Row="8" Grid.Column="3" Background="#e35a29" Margin="5,5,35,5" FontSize="21" Grid.ColumnSpan="3" Click="equalBtn_Click"/>
+        <Button x:Name="equalBtn" Content="=" Grid.Row="8" Grid.Column="3" Background="#e35a29" Margin="5,5,35,5" FontSize="21" Grid.ColumnSpan="3" Click="equalBtn_Click"/>
         <Button x:Name="plusBtn" Content="+" Grid.Row="7" Grid.Column="4" Background="#f58f22" Margin="5,5,35,5" FontSize="21" Grid.ColumnSpan="2" Click="plusBtn_Click"/>
         <Button x:Name="minusBtn" Content="-" Grid.Row="6" Grid.Column="4" Background="#f58f22" Margin="5,5,35,5" FontSize="21" Grid.ColumnSpan="2" Click="minusBtn_Click" />
         <Button x:Name="multipyBtn" Content="×" Grid.Row="5" Grid.Column="4" Background="#f58f22" Margin="5,5,35,5" FontSize="21" Grid.ColumnSpan="2" Click="multipyBtn_Click" />
@@ -48,18 +48,18 @@
         <Button x:Name="ClearBtn" Content="C" Grid.Row="4" Grid.Column="2" Background="#f1f27c" Margin="5" FontSize="21" Click="ClearBtn_Click" />
         <Button x:Name="BackspaceBtn" Content="⌫" Grid.Row="4" Grid.Column="3" Background="#f1f27c" Margin="5,5,5,5" FontSize="21" Click="BackspaceBtn_Click" />
 
-        <Button x:Name="sinBtn" Content="sin" Grid.Row="3" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="cosBtn" Content="cos" Grid.Row="3" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="tanBtn" Content="tg" Grid.Row="3" Grid.Column="2" Background="#f1f27c" Margin="5" FontSize="21" />
-        <Button x:Name="factBtn" Content="x!" Grid.Row="3" Grid.Column="3" Background="#f1f27c" Margin="5" FontSize="21"/>
+        <Button x:Name="sinBtn" Content="sin" Grid.Row="3" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="sinBtn_Click" />
+        <Button x:Name="cosBtn" Content="cos" Grid.Row="3" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21" Click="cosBtn_Click" />
+        <Button x:Name="tanBtn" Content="tg" Grid.Row="3" Grid.Column="2" Background="#f1f27c" Margin="5" FontSize="21" Click="tanBtn_Click" />
+        <Button x:Name="factBtn" Content="x!" Grid.Row="3" Grid.Column="3" Background="#f1f27c" Margin="5" FontSize="21" Click="factBtn_Click" />
         <Button x:Name="numPi" Content="π" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="5,5,20,5" FontSize="21" Click="InputOperand" />
         <Button x:Name="numE" Content="e" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="60,5,35,5" FontSize="21" Grid.ColumnSpan="2" Click="InputOperand" />
 
-        <Button x:Name="lnBtn" Content="ln" Grid.Row="4" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="logBtn" Content="lg" Grid.Row="4" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="powerNBtn" Content="xⁿ" Grid.Row="5" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="powerTwoBtn" Content="x²" Grid.Row="6" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="sqrtBtn" Content="√x" Grid.Row="7" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" />
+        <Button x:Name="lnBtn" Content="ln" Grid.Row="4" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="lnBtn_Click" />
+        <Button x:Name="logBtn" Content="lg" Grid.Row="4" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21" Click="logBtn_Click" />
+        <Button x:Name="powerNBtn" Content="xⁿ" Grid.Row="5" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="powerNBtn_Click" />
+        <Button x:Name="powerTwoBtn" Content="x²" Grid.Row="6" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="powerTwoBtn_Click" />
+        <Button x:Name="sqrtBtn" Content="√x" Grid.Row="7" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" Click="sqrtBtn_Click" />
         <Button x:Name="ReversBtn" Content="±" Grid.Row="8" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21" />
 
         <Button x:Name="MC" Content="MC" Grid.Row="2" Grid.Column="0" Background="#94c3f2" Margin="5,20,5,5" FontSize="18" />
