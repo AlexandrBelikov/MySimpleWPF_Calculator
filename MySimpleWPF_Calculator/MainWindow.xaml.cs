@@ -24,6 +24,7 @@ namespace MySimpleWPF_Calculator
         double tmp = 0;
         string operation = "";
         bool check = false;
+        double memoryCellValue = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -349,6 +350,52 @@ namespace MySimpleWPF_Calculator
                 tmpInfo.Text = (tmp.ToString() + "^");
             }
 
+        }
+
+        private void ReversBtn_Click(object sender, RoutedEventArgs e)
+        {
+            tmp = double.Parse(outputInfo.Text);
+            double reversNum = (tmp * (-1));
+            output = reversNum.ToString();
+            outputInfo.Text = reversNum.ToString();
+        }
+
+        private void MC_Click(object sender, RoutedEventArgs e)
+        {
+            memoryCellValue = 0;
+            memoryCell.Text = "Memory cell : " + memoryCellValue.ToString();
+
+        }
+
+        private void MR_Click(object sender, RoutedEventArgs e)
+        {
+            outputInfo.Text = memoryCellValue.ToString();
+        }
+
+        private void Mpl_Click(object sender, RoutedEventArgs e)
+        {
+            memoryCellValue += double.Parse(outputInfo.Text);
+            memoryCell.Text = "Memory cell : " + memoryCellValue.ToString();
+        }
+
+        private void Mmin_Click(object sender, RoutedEventArgs e)
+        {
+            memoryCellValue -= double.Parse(outputInfo.Text);
+            memoryCell.Text = "Memory cell : " + memoryCellValue.ToString();
+        }
+
+        private void MS_Click(object sender, RoutedEventArgs e)
+        {
+            memoryCellValue = double.Parse(outputInfo.Text);
+            memoryCell.Text = "Memory cell : " + memoryCellValue.ToString();
+        }
+
+        private void M_Click(object sender, RoutedEventArgs e)
+        {
+            if (memoryCell.Visibility == Visibility.Visible)
+                memoryCell.Visibility = Visibility.Collapsed;
+            else
+                memoryCell.Visibility = Visibility.Visible;
         }
     }
 }
