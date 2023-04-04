@@ -52,8 +52,8 @@
         <Button x:Name="cosBtn" Content="cos" Grid.Row="3" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21"/>
         <Button x:Name="tanBtn" Content="tg" Grid.Row="3" Grid.Column="2" Background="#f1f27c" Margin="5" FontSize="21" />
         <Button x:Name="factBtn" Content="x!" Grid.Row="3" Grid.Column="3" Background="#f1f27c" Margin="5" FontSize="21"/>
-        <Button x:Name="numPi" Content="π" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="5,5,20,5" FontSize="21"/>
-        <Button x:Name="numE" Content="e" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="60,5,35,5" FontSize="21" Grid.ColumnSpan="2"/>
+        <Button x:Name="numPi" Content="π" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="5,5,20,5" FontSize="21" Click="InputOperand" />
+        <Button x:Name="numE" Content="e" Grid.Row="3" Grid.Column="4" Background="#f1f27c" Margin="60,5,35,5" FontSize="21" Grid.ColumnSpan="2" Click="InputOperand" />
 
         <Button x:Name="lnBtn" Content="ln" Grid.Row="4" Grid.Column="0" Background="#f1f27c" Margin="5" FontSize="21"/>
         <Button x:Name="logBtn" Content="lg" Grid.Row="4" Grid.Column="1" Background="#f1f27c" Margin="5" FontSize="21"/>
