@@ -225,5 +225,14 @@ namespace MySimpleWPF_Calculator
             tmpInfo.Text = "";
             output = "";
         }
+        private void BackspaceBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (outputInfo.Text.Length > 0)
+            {
+                outputInfo.Text = outputInfo.Text.Remove(outputInfo.Text.Length - 1);
+                output = outputInfo.Text;
+            }
+
+        }
     }
 }
