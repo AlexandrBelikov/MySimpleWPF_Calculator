@@ -182,13 +182,13 @@ namespace MySimpleWPF_Calculator
 
             if (check != false)
             {
-                Calculator operation = new Calculator();
+                Calculator op = new Calculator();
 
                 switch (this.operation)
                 {
                     case "+":
                         tmpInfo.Text += outputInfo.Text;
-                        double outputTempAdd = operation.Plus(tmp, double.Parse(outputInfo.Text));
+                        double outputTempAdd = op.Plus(tmp, double.Parse(outputInfo.Text));
                         output = outputTempAdd.ToString();
                         outputInfo.Text = output;
                         tmpInfo.Text += " = " + output;
@@ -196,28 +196,36 @@ namespace MySimpleWPF_Calculator
 
                     case "-":
                         tmpInfo.Text += outputInfo.Text;
-                        double outputTempMin = operation.Minus(tmp, double.Parse(outputInfo.Text));
+                        double outputTempMin = op.Minus(tmp, double.Parse(outputInfo.Text));
                         output = outputTempMin.ToString();
                         outputInfo.Text = output;
                         break;
 
                     case "x":
                         tmpInfo.Text += outputInfo.Text;
-                        double outputTempMul = operation.Multipy(tmp, double.Parse(outputInfo.Text));
+                        double outputTempMul = op.Multipy(tmp, double.Parse(outputInfo.Text));
                         output = outputTempMul.ToString();
                         outputInfo.Text = output;
                         break;
 
                     case "÷":
                         tmpInfo.Text += outputInfo.Text;
-                        double outputTempDiv = operation.Divide(tmp, double.Parse(outputInfo.Text));
+                        double outputTempDiv = op.Divide(tmp, double.Parse(outputInfo.Text));
                         output = outputTempDiv.ToString();
+                        outputInfo.Text = output;
+                        break;
+
+                    case "^":
+                        tmpInfo.Text += outputInfo.Text;
+                        double outputTempPown = op.PowerN(tmp, int.Parse(outputInfo.Text));
+                        output = outputTempPown.ToString();
                         outputInfo.Text = output;
                         break;
                 }
 
                 check = false;
             }
+
         }
 
         private void ClearBtn_Click(object sender, RoutedEventArgs e)
@@ -346,9 +354,14 @@ namespace MySimpleWPF_Calculator
             if (output != "")
             {
                 tmp = double.Parse(output);
+
                 output = "";
-                tmpInfo.Text = (tmp.ToString() + "^");
+
+                operation = "^";
             }
+            tmpInfo.Text = (tmp.ToString() + " " + operation + " ");
+
+            check = true;
 
         }
 
